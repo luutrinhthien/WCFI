@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  background-color: rgb(0, 0, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.loader svg {
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.loader svg path {
+  animation-duration: 1s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  color: #26a380;
+  /* color: red; */
+}
+
+.path-7 {
+  animation-delay: -1s;
+}
+
+.path-6 {
+  animation-delay: -0.875s;
+}
+
+.path-5 {
+  animation-delay: -0.75s;
+}
+
+.path-4 {
+  animation-delay: -0.625s;
+}
+
+.path-3 {
+  animation-delay: -0.5s;
+}
+
+.path-2 {
+  animation-delay: -0.375s;
+}
+
+.path-1 {
+  animation-delay: -0.25s;
+}
+
+.path-0 {
+  animation-delay: -0.125s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.underline {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, #80CBC4, #4DD0E1, #E400FF, #EC407A);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.borderGradient {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, #80CBC4, #4DD0E1, #E400FF, #EC407A);
+  border-radius: 20px;
+}
