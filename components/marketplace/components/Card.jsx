@@ -68,7 +68,7 @@ export default function Card({ setApprovalForAll, isApprovedForAll, setIsApprove
 
     // console.log(data?.tokens)
     if (loading || loading3) {
-        return <Text fontSize={20}>Loading...</Text>;
+        return <Text fontSize={20} color="white">Loading...</Text>;
     } else
         return (
             <>
@@ -93,7 +93,7 @@ export default function Card({ setApprovalForAll, isApprovedForAll, setIsApprove
                 </Grid>
                 <Box className="rounded-xl mt-10 mb-10 mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]" width={{ base: "20%", sm: "35%", md: "20%", lg: "20%", xl: "20%" }}>
                     <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='black'>
-                        <Button fontSize={12} variant='unstyle'>Load more</Button>
+                        <Button fontSize={12} variant='unstyle' color="white">Load more</Button>
                     </Box>
                 </Box>
             </>

@@ -78,7 +78,7 @@ export default function Marketplace() {
                         <option value='option2'>Price: high to low</option>
                         <option value='option3'>Price: low to high</option>
                     </Select>
-                    <Button backgroundColor={"black"} variant={"outline"} rounded={12} ml={3} onClick={onOpen} fontSize={14}>Filter&nbsp;
+                    <Button backgroundColor={"black"} variant={"outline"} rounded={12} ml={3} onClick={onOpen} fontSize={14} color="white">Filter&nbsp;
                         <img src="./filter.png" width={16} height={16} alt="" />
                     </Button>
                 </Box>

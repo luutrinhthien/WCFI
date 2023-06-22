@@ -95,7 +95,7 @@ export default function Card({ setApprovalForAll, isApprovedForAll,
     console.log("loading: ", loading3)
 
     if (loading && loading3) {
-        return <Text fontSize={22}>Loading...</Text>;
+        return <Text fontSize={22} color="white">Loading...</Text>;
     } else
         return (
             <>

@@ -130,7 +130,7 @@ export default function Asset() {
                         <option value='option2'>Price: high to low</option>
                         <option value='option3'>Price: low to high</option>
                     </Select>
-                    <Button backgroundColor={"black"} variant={"outline"} rounded={12} ml={3} onClick={onOpen}><Text fontSize={14}>Filter&nbsp;</Text>
+                    <Button backgroundColor={"black"} variant={"outline"} rounded={12} ml={3} onClick={onOpen}><Text fontSize={14} color="white">Filter&nbsp;</Text>
                         <img src="./filter.png" width={16} height={16} alt="" />
                     </Button>
                 </Box>
