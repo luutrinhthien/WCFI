@@ -4,24 +4,21 @@ import { useNotification } from "web3uikit"
 import { abi, contractAddress, marketplaceAddress } from '../constants'
 import { useMoralis, useWeb3Contract } from 'react-moralis'
 import { useState, useEffect } from 'react'
-import Layer01 from './layers/Layer01'
-import Layer02 from './layers/Layer02'
-import Layer03 from './layers/Layer03'
-import Layer04 from './layers/Layer04'
-import Layer05 from './layers/Layer05'
-import Layer06 from './layers/Layer06'
+import Layer01 from './home/layers/Layer01'
+import Layer02 from './home/layers/Layer02'
+import Layer03 from './home/layers/Layer03'
+import Layer04 from './home/layers/Layer04'
+import Layer05 from './home/layers/Layer05'
+import Layer06 from './home/layers/Layer06'
 
 export default function index() {
 
-    const { user, enableWeb3, isWeb3Enabled, account, deactivateWeb3,
-        isInitialized, Moralis, isWeb3EnableLoading } = useMoralis()
+    const { isWeb3Enabled, account } = useMoralis()
 
     const [mintedTimes, setMintedTimes] = useState(0)
     const [isApprove, setIsApprove] = useState(false)
     const [mintFeeUI, setMintFeeUI] = useState(0)
     const [updateBalance, setUpdateBalance] = useState(false)
-
-    const dispatch = useNotification()
 
     /* Write Functions */
     const {
@@ -38,10 +35,7 @@ export default function index() {
     })
 
     const {
-        runContractFunction: mint,
-        data: enterTxResponseMint,
-        isLoadingMint,
-        isFetchingMint,
+        runContractFunction: mint
     } = useWeb3Contract({
         abi: abi,
         contractAddress: contractAddress,
@@ -76,7 +70,7 @@ export default function index() {
     /* Update UI */
     async function updateUIValues() {
         if (account) {
-            const balanceOfUser = (await balanceOf()).toString()
+            const balanceOfUser = (await balanceOf())?.toString()
             const Approved = (await isApprovedForAll())
             const mintNum = parseInt(await mintFee())
             setMintedTimes(balanceOfUser)

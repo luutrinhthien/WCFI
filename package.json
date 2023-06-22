@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@next/font": "^13.4.6",
     "@toruslabs/eccrypto": "^3.0.0",
     "@web3auth/web3auth": "^2.1.3",
     "autoprefixer": "10.4.14",

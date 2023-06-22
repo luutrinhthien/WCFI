@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import ConnectWallet from './ConnectNav/ConnectWallet';
+import { Show, Hide } from '@chakra-ui/react';
 
 export default function NavBar({ updateBalance, target }) {
     const [navbar, setNavbar] = useState(false);
@@ -14,7 +15,7 @@ export default function NavBar({ updateBalance, target }) {
                         <div className="flex items-center space-between py-3 md:py-5 md:block">
                             <div className="md:hidden">
                                 <button
-                                    className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                    className="pr-1 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                                     onClick={() => setNavbar(!navbar)}
                                 >
                                     {navbar ? (
@@ -49,9 +50,17 @@ export default function NavBar({ updateBalance, target }) {
                                 </button>
                             </div>
                             <div style={{ display: 'flex' }}>
-                                <a href="#">
-                                    <h2 className="text-4xl text-white font-extrabold	">WCFI</h2>
-                                </a>
+                                <Show above='md'>
+                                    <a href="#">
+                                        <h2 className="text-3xl text-white font-extrabold">WCFI</h2>
+                                    </a>
+                                </Show>
+                                <Show below='md'>
+                                    <a href="#">
+                                        <h2 className="text-2xl text-white font-extrabold pr-1">WCFI</h2>
+                                    </a>
+                                    <ConnectWallet updateBalance={updateBalance}></ConnectWallet>
+                                </Show>
                             </div>
                         </div>
                     </div>
@@ -60,7 +69,7 @@ export default function NavBar({ updateBalance, target }) {
                             className={` flex justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
                                 }`}
                         >
-                            <ul className="font-semibold text-xl items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <ul className="font-semibold text-md items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                                 <li className="text-white">
                                     {/* <Box style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                                         <Link href="/" >
@@ -105,7 +114,9 @@ export default function NavBar({ updateBalance, target }) {
                         >
                             <ul className="items-center justify-center space-y-4 md:flex md:space-x-6 md:space-y-0">
                                 <li className="text-white">
-                                    <ConnectWallet updateBalance={updateBalance}></ConnectWallet>
+                                    <Hide below='md'>
+                                        <ConnectWallet updateBalance={updateBalance}></ConnectWallet>
+                                    </Hide>
                                 </li>
                             </ul>
                         </div>

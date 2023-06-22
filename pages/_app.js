@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <title>WCFI</title>
                 <meta name="description" content="WFCI" />
+                <link href="https://api.fontshare.com/v2/css?f%5B%5D=panchang@700&display=swap" rel="stylesheet"></link>
             </Head>
             <MoralisProvider initializeOnMount={false}>
                 <ApolloProvider client={client}>

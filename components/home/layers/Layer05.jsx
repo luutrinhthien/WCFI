@@ -5,12 +5,12 @@ import Image from 'next/image'
 export default function Layer05() {
     return (
         <Box p={5}>
-            <Text fontWeight={"extrabold"}>Match Schedule</Text>
-            <Text fontWeight={"hairline"} fontSize={12}>Match day 1 of 3</Text>
+            <Text fontWeight={"extrabold"} fontSize={14}>Match Schedule</Text>
+            <Text fontWeight={"hairline"} fontSize={10} color={"rgba(121,129,151,1)"}>Match day 1 of 3</Text>
 
             <Box>
                 <Box mt={3} mb={3}>
-                    <Text fontWeight={"hairline"} fontSize={12}>Group A</Text>
+                    <Text fontWeight={"hairline"} fontSize={10} color={"rgba(121,129,151,1)"}>Group A</Text>
                 </Box>
                 <Box mt={3} mb={3} display={"flex"} justifyContent={"space-between"}>
                     <Box display={'flex'}>
@@ -21,13 +21,13 @@ export default function Layer05() {
                             <Image alt={"ecuador"} src={`/flags/ecuador.png`} height={24} width={24}></Image>
                         </Box>
                         <Box>
-                            <Text fontWeight={"extrabold"} pl={1}>QAT</Text>
-                            <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>ECU</Text>
+                            <Text fontSize={12} fontWeight={"extrabold"} pl={1}>QAT</Text>
+                            <Text fontSize={12} style={{ paddingTop: "12px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>ECU</Text>
                         </Box>
                     </Box>
                     <Box>
-                        <Text fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
-                        <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>23:00</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>23:00</Text>
                     </Box>
                 </Box>
                 <Box mt={3} mb={3} display={"flex"} justifyContent={"space-between"}>
@@ -39,19 +39,19 @@ export default function Layer05() {
                             <Image alt={"netherlands"} src={`/flags/netherlands.png`} height={24} width={24}></Image>
                         </Box>
                         <Box>
-                            <Text fontWeight={"extrabold"} pl={1}>SEN</Text>
-                            <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>NED</Text>
+                            <Text fontSize={12} fontWeight={"extrabold"} pl={1}>SEN</Text>
+                            <Text fontSize={12} style={{ paddingTop: "12px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>NED</Text>
                         </Box>
                     </Box>
                     <Box>
-                        <Text fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
-                        <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>23:00</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>23:00</Text>
                     </Box>
                 </Box>
             </Box>
             <Box>
                 <Box mt={3} mb={3}>
-                    <Text fontWeight={"hairline"} fontSize={12}>Group B</Text>
+                    <Text fontSize={10} fontWeight={"hairline"} color={"rgba(121,129,151,1)"}>Group B</Text>
                 </Box>
                 <Box mt={3} mb={3} display={"flex"} justifyContent={"space-between"}>
                     <Box display={'flex'}>
@@ -62,13 +62,13 @@ export default function Layer05() {
                             <Image alt={"iran"} src={`/flags/iran.png`} height={24} width={24}></Image>
                         </Box>
                         <Box>
-                            <Text fontWeight={"extrabold"} pl={1}>ENG</Text>
-                            <Text style={{ paddingTop: "5px" }} alt={"iran"} fontWeight={"extrabold"} pl={1}>IRN</Text>
+                            <Text fontSize={12} fontWeight={"extrabold"} pl={1}>ENG</Text>
+                            <Text fontSize={12} style={{ paddingTop: "12px" }} alt={"iran"} fontWeight={"extrabold"} pl={1}>IRN</Text>
                         </Box>
                     </Box>
                     <Box>
-                        <Text fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
-                        <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20:00</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20:00</Text>
                     </Box>
                 </Box>
                 <Box mt={3} mb={3} display={"flex"} justifyContent={"space-between"}>
@@ -80,13 +80,13 @@ export default function Layer05() {
                             <Image style={{ paddingTop: "5px" }} alt={"wales"} src={`/flags/wales.png`} height={24} width={24}></Image>
                         </Box>
                         <Box>
-                            <Text fontWeight={"extrabold"} pl={1}>USA</Text>
-                            <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>WAL</Text>
+                            <Text fontSize={12} fontWeight={"extrabold"} pl={1}>USA</Text>
+                            <Text fontSize={12} style={{ paddingTop: "12px" }} alt={"ecuador"} fontWeight={"extrabold"} pl={1}>WAL</Text>
                         </Box>
                     </Box>
                     <Box>
-                        <Text fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
-                        <Text style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20:00</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20/11</Text>
+                        <Text color={"rgba(121,129,151,1)"} fontSize={10} style={{ paddingTop: "5px" }} alt={"ecuador"} fontWeight={"hairline"} borderLeft={"1px solid rgba(41,49,61,1)"} pl={2}>20:00</Text>
                     </Box>
                 </Box>
             </Box>
@@ -104,7 +104,7 @@ export default function Layer05() {
                         </Box>
                     </Box>
                 </Box>
-                <Box mt={3} style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>See all</Box>
+                <Box mt={3} fontSize={12} style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>See all</Box>
             </Box>
         </Box>
     )

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, GridItem, Box, Text, Button } from '@chakra-ui/react'
+import { Grid, GridItem, Box, Text, Button, Show } from '@chakra-ui/react'
 import Image from 'next/image'
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis'
 import { ConnectButton, WalletModal } from 'web3uikit'
@@ -88,15 +88,25 @@ export default function ConnectWallet({ updateBalance }) {
 
     return (
         <Box display={'flex'}>
-            <div style={{ width: '34px', height: '34px' }}>
-                <Image alt={'Bnb'} src={'/bnb.png'} width={48} height={48}></Image>
-            </div>
-            <Box pl={3} pr={4}>
-                <Text fontWeight={'light'} fontSize={14}>BNB</Text>
-                <Text fontWeight={700} fontSize={18}>{balance || "0.00"}</Text>
-            </Box>
+            <Show above='md'>
+                <Box mt={2} style={{ width: '34px', height: '34px' }}>
+                    <Image alt={'Bnb'} src={'/bnb.png'} width={48} height={48}></Image>
+                </Box>
+            </Show>
+            <Show above='md'>
+                <Box mt={2} pl={3} pr={4}>
+                    <Text fontWeight={100} fontSize={10}>BNB</Text>
+                    <Text fontWeight={700} fontSize={14}>{balance || "0.00"}</Text>
+                </Box>
+            </Show>
+            <Show below='md'>
+                <Box mt={2} pl={1} pr={1}>
+                    <Text fontWeight={"thin"} fontSize={10}>BNB</Text>
+                    <Text fontWeight={700} fontSize={14}>{balance || "0.00"}</Text>
+                </Box>
+            </Show>
             {!account ? (<Button
-                minW={"180px"}
+                minW={"160px"}
                 rounded={12}
                 dropShadow={'inner'}
                 border={'black solid 2px'}
@@ -106,11 +116,11 @@ export default function ConnectWallet({ updateBalance }) {
                     setWalletOn(!walletOn)
                 }
                 style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
-                <Text fontWeight={700} >Connect Wallet</Text>
+                <Text fontWeight={700} fontSize={14}>Connect Wallet</Text>
             </Button>) : (
                 <Box className="rounded-xl mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]">
-                    <Box className="flex flex-col justify-between h-full rounded-lg p-1 pl-2 pr-2" bg='#0E1114'>
-                        <Button variant='unstyle'>{account.slice(0, 6)}...{account.slice(account.length - 4, account.length)}</Button>
+                    <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='#0E1114'>
+                        <Button variant='unstyle' fontSize={14}>{account.slice(0, 6)}...{account.slice(account.length - 4, account.length)}</Button>
                     </Box>
                 </Box>)}
 

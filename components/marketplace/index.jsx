@@ -1,16 +1,23 @@
 import React from 'react'
 import { useMoralis, useWeb3Contract } from 'react-moralis'
 import { useState, useEffect } from 'react'
-import { Button } from 'web3uikit'
 import NavBar from '../NavBar'
 import { getData, saveData, updateData } from '../../utils/localStorage'
 import Information from './components/Information'
-import { Box, Select, Text } from '@chakra-ui/react'
+import { Box, Select, Text, useDisclosure, Button } from '@chakra-ui/react'
 import Card from './components/Card'
 import { abi, contractAddress, marketplaceAddress } from '../../constants'
+import Filter from './components/Filter'
 
 export default function Marketplace() {
+    const { isOpen, onClose, onOpen } = useDisclosure()
+
+    const [isFilter, setIsFilter] = useState(false)
+    const [itemQuery, setItemQuery] = useState([])
+
     const [isApprove, setIsApprove] = useState(false)
+
+    const [updateBalance, setUpdateBalance] = useState(false)
 
     const { user, enableWeb3, isWeb3Enabled, account, deactivateWeb3,
         isInitialized, Moralis, isWeb3EnableLoading } = useMoralis()
@@ -48,12 +55,6 @@ export default function Marketplace() {
         }
     }, [isWeb3Enabled, account])
 
-
-    // console.log("CHECKKKKK isApprove AT INDEX ===== ", isApprove)
-    // console.log("CHECKKKKK account AT INDEX ===== ", account)
-    // console.log("CHECKKKKK isWeb3Enabled AT INDEX ===== ", isWeb3Enabled)
-
-
     useEffect(() => {
         const user = getData('user');
         if (user) {
@@ -64,24 +65,33 @@ export default function Marketplace() {
     return (
         <Box backgroundColor={"black"}>
             <Box backgroundColor={"black"} color={'white'}>
-                <NavBar target="marketplace"></NavBar>
+                <NavBar updateBalance={updateBalance} target="marketplace"></NavBar>
                 <Box style={{ margin: "40px auto", maxWidth: "80%", marginBottom: "0px" }}>
                     <Information />
                 </Box>
             </Box>
             <Box display={{ base: "block", sm: "block", md: "flex", lg: "flex", xl: "flex", "2xl": "flex" }} style={{ margin: "20px auto", maxWidth: "80%" }} justifyContent={"space-between"}>
-                <Text backgroundColor={"black"} color={'white'} fontWeight={"bold"} fontSize={24}>Items (Total 90,000)</Text>
-                <Select w={"12rem"} color={"white"}>
-                    <option value='option1' >Newest</option>
-                    <option value='option2'>Price: high to low</option>
-                    <option value='option3'>Price: low to high</option>
-                </Select>
+                <Text backgroundColor={"black"} color={'white'} fontWeight={"bold"} fontSize={18}>Items (Total 90,000)</Text>
+                <Box display={"flex"}>
+                    <Select fontSize={14} rounded={12} w={"12rem"} color={"white"}>
+                        <option value='option1' >Newest</option>
+                        <option value='option2'>Price: high to low</option>
+                        <option value='option3'>Price: low to high</option>
+                    </Select>
+                    <Button backgroundColor={"black"} variant={"outline"} rounded={12} ml={3} onClick={onOpen} fontSize={14}>Filter&nbsp;
+                        <img src="./filter.png" width={16} height={16} alt="" />
+                    </Button>
+                </Box>
             </Box>
             <Box style={{ margin: "20px auto", maxWidth: "80%", marginBottom: "0px" }}>
                 <Card setApprovalForAll={setApprovalForAll}
                     isApprovedForAll={isApprove}
-                    setIsApprove={setIsApprove} />
+                    setIsApprove={setIsApprove}
+                    setUpdateBalance={setUpdateBalance}
+                    itemQuery={itemQuery} />
             </Box>
+
+            <Filter isOpen={isOpen} onClose={onClose} setItemQuery={setItemQuery} setIsFilter={setIsFilter} />
         </Box>
     )
 }

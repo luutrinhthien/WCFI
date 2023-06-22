@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { useMoralis, useWeb3Contract, useMoralisWeb3Api } from 'react-moralis'
 import { WalletModal } from 'web3uikit'
-import { contractAddress, abi } from '../../constants'
+import { contractAddress, abi } from '../../../constants'
 import { useNotification } from "web3uikit"
 import { ethers } from 'ethers'
 import {
@@ -116,18 +116,18 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                 borderTopRightRadius={{ base: 0, sm: 0, md: 10, lg: 10, xl: 10, "2xl": 10 }}
                 borderBottomRightRadius={{ base: 10, sm: 10, md: 10, lg: 10, xl: 10, "2xl": 10 }}>
                 <Box p={5} pr={10}>
-                    <Box pt={3} fontSize={20} fontWeight={700}>Mint your NFT</Box>
-                    <Box pt={3} fontSize={14} fontWeight={200} color={"rgba(121,129,151,1)"}>Mint randomly releases NFT shoes to represent the national team</Box>
+                    <Box pt={3} fontSize={16} fontWeight={700}>Mint your NFT</Box>
+                    <Box pt={3} mt={5} fontSize={12} fontWeight={200} color={"rgba(121,129,151,0.6)"}>Mint randomly releases NFT shoes to represent the national team</Box>
                     <Box pt={3} display={'flex'} justifyContent={'space-between'}>
-                        <Text fontSize={14} fontWeight={200} color={"rgba(121,129,151,1)"}>Minted times:</Text>
-                        <Text fontSize={14} fontWeight={600}>{mintedTimes}</Text>
+                        <Text fontSize={12} fontWeight={200} color={"rgba(121,129,151,0.6)"}>Minted times:</Text>
+                        <Text fontSize={12} fontWeight={600}>{mintedTimes}</Text>
                     </Box>
                     <Box pt={3} display={'flex'} justifyContent={'space-between'}>
                         <Box display={'flex'}>
-                            <Text fontSize={14} fontWeight={200} color={"rgba(121,129,151,1)"}>Mint rate: </Text>
+                            <Text fontSize={12} fontWeight={200} color={"rgba(121,129,151,0.6)"}>Mint rate: </Text>
                             <Image alt={'info'} src={'/ques.svg'} width={14} height={14}></Image>
                         </Box>
-                        <Text fontSize={14} fontWeight={600}>{
+                        <Text fontSize={12} fontWeight={600}>{
                             (Math.floor(20 * (1 + 0.1) ** parseInt(mintedTimes)))
                                 >= 100 ? 99 :
                                 (Math.floor(20 * (1 + 0.1) ** parseInt(mintedTimes)))}% Get Tier 1</Text>
@@ -135,7 +135,7 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                     <Box>
                         {!account ? <Box className="rounded-xl mt-10 mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]">
                             <Box className="flex flex-col justify-between h-full rounded-xl p-1" bg='#0E1114'>
-                                <Button onClick={() => setWalletOn(!walletOn)} variant='unstyle'>Connect Wallet</Button>
+                                <Button onClick={() => setWalletOn(!walletOn)} variant='unstyle' fontSize={14}>Connect Wallet</Button>
                             </Box>
                         </Box>
                             :
@@ -161,7 +161,7 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                                     disabled={isWeb3EnableLoading}
                                     onClick={handleMint}
                                     style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
-                                    <Text fontWeight={700} >Mint with {mintFee ? ethers.utils.formatEther(mintFee) : 0} BNB</Text>
+                                    <Text fontSize={12} fontWeight={700} >Mint with {mintFee ? ethers.utils.formatEther(mintFee) : 0} BNB</Text>
                                 </Button>)}
                     </Box>
                     {walletOn && <WalletModal isOpened={true} setIsOpened={function noRefCheck() { setWalletOn(!walletOn) }} />}
