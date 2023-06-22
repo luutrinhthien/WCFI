@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function loadingModal() {
+export default function LoadingModal() {
     return (
         <div className="main-fader" >
             <div className="loader">

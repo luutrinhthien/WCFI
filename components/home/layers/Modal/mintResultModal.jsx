@@ -19,7 +19,7 @@ import {
 
 // console.log("HELLO FROM IMAGE", `${country.uruguay.attributes[2].value}`)
 
-export default function mintResultModal({ isOpen, onClose, setData, setShowResult, data, transactionHash }) {
+export default function MintResultModal({ isOpen, onClose, setData, setShowResult, data, transactionHash }) {
 
     const { user, enableWeb3, isWeb3Enabled, account, isWeb3EnableLoading } = useMoralis()
 

@@ -11,7 +11,7 @@ import Layer04 from './home/layers/Layer04'
 import Layer05 from './home/layers/Layer05'
 import Layer06 from './home/layers/Layer06'
 
-export default function index() {
+export default function Index() {
 
     const { isWeb3Enabled, account } = useMoralis()
 
