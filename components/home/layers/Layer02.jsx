@@ -15,8 +15,8 @@ import {
     ModalBody,
     ModalCloseButton, useDisclosure
 } from '@chakra-ui/react'
-import LoadingModal from "./Modal/loadingModal"
-import MintResultModal from './Modal/mintResultModal'
+import LoadingModal from "./Modal/LoadingModal"
+import MintResultModal from './Modal/MintResultModal'
 
 export default function Layer02({ mintedTimes, setApprovalForAll,
     isApprovedForAll, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {

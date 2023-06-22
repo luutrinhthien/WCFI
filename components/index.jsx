@@ -70,14 +70,13 @@ export default function index() {
     /* Update UI */
     async function updateUIValues() {
         if (account) {
-            const balanceOfUser = (await balanceOf())?.toString()
             const Approved = (await isApprovedForAll())
             const mintNum = parseInt(await mintFee())
-            setMintedTimes(balanceOfUser)
+            const balanceOfUser = (await balanceOf())?.toString()
             setIsApprove(Approved)
             setMintFeeUI(mintNum)
+            setMintedTimes(balanceOfUser)
         }
-
     }
     useEffect(() => {
         if (isWeb3Enabled && account) {

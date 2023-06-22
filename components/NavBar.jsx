@@ -71,33 +71,31 @@ export default function NavBar({ updateBalance, target }) {
                         >
                             <ul className="font-semibold text-md items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                                 <li className="text-white">
-                                    {/* <Box style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                                    <Box style={{ background: (target == "home" ? "linear-gradient(to right, #80E8DD, #D855A6)" : ""), WebkitBackgroundClip: (target == "home" ? 'text' : ""), WebkitTextFillColor: (target == "home" ? 'transparent' : "") }}>
                                         <Link href="/" >
                                             Home
                                         </Link>
-                                    </Box> */}
-                                    <a
+                                    </Box>
+                                    {/* <Link
                                         className={target == "home" ? "bg-gradient-to-r from-teal-200 via-cyan-300 via-purple-200 to-pink-400 text-transparent bg-clip-text " : ""}
                                         href='/'
                                     >
                                         Home
-                                    </a>
+                                    </Link> */}
                                 </li>
                                 <li className="text-white">
-                                    <a
-                                        className={target == "marketplace" ? "bg-gradient-to-r from-teal-200 via-cyan-300 via-purple-200 to-pink-400 text-transparent bg-clip-text " : ""}
-                                        href='/marketplace'
-                                    >
-                                        Marketplace
-                                    </a>
+                                    <Box style={{ background: (target == "marketplace" ? "linear-gradient(to right, #80E8DD, #D855A6)" : "black"), WebkitBackgroundClip: (target == "marketplace" ? 'text' : ""), WebkitTextFillColor: (target == "marketplace" ? 'transparent' : "") }}>
+                                        <Link href="/marketplace" >
+                                            Marketplace
+                                        </Link>
+                                    </Box>
                                 </li>
                                 <li className="text-white">
-                                    <a
-                                        className={target == "assets" ? "bg-gradient-to-r from-teal-200 via-cyan-300 via-purple-200 to-pink-400 text-transparent bg-clip-text " : ""}
-                                        href='/assets'
-                                    >
-                                        Assets
-                                    </a>
+                                    <Box style={{ background: (target == "assets" ? "linear-gradient(to right, #80E8DD, #D855A6)" : "black"), WebkitBackgroundClip: (target == "assets" ? 'text' : ""), WebkitTextFillColor: (target == "assets" ? 'transparent' : "") }}>
+                                        <Link href="/assets" >
+                                            Asset
+                                        </Link>
+                                    </Box>
                                 </li>
                                 <li className="text-white">
                                     <Link href="/">
