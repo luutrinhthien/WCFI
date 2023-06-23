@@ -2,7 +2,7 @@ import {
     Box, Button, Text, Grid, GridItem, Select,
     Input, InputGroup, InputRightElement, InputLeftElement
 } from '@chakra-ui/react'
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 import { useMoralis, useWeb3Contract } from 'react-moralis'
 import metadata from '../../../utils/metadata'
@@ -151,6 +151,9 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
         }
     }
 
+    useEffect(() => {
+        setIsApprove(isApprovedForAll)
+    }, [isApprovedForAll])
     return (
         <Box>
             <Box onClick={onOpen}>
