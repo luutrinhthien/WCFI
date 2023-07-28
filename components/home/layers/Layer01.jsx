@@ -13,7 +13,7 @@ export default function Layer01() {
                 <GridItem colSpan={4} bg='#0E1114' borderLeftRadius={10}>
                     <Box p={6} pl={12}>
                         <Box fontSize={12} fontWeight={200} color={"rgba(121,129,151,1)"}>Total Reward</Box>
-                        <Box fontSize={28} fontWeight={700}>$ 8.064.000</Box>
+                        <Box fontSize={28} fontWeight={700}>$ 8.063.000</Box>
                         <Box fontSize={12} onClick={() => { window.open(`https://testnet.bscscan.com/address/${contractAddress}`, '_blank') }} width={"fit-content"} style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             <Link href="" >
                                 View Contract
