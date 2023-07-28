@@ -21,7 +21,7 @@ import MintResultModal from './Modal/mintResultModal'
 export default function Layer02({ mintedTimes, setApprovalForAll,
     isApprovedForAll, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {
 
-    const { Moralis, Web3Api } = useMoralisWeb3Api();
+    // const { Moralis, Web3Api } = useMoralisWeb3Api();
 
     const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
 
@@ -29,7 +29,7 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const { user, enableWeb3, isWeb3Enabled, account, isWeb3EnableLoading } = useMoralis()
+    const { user, enableWeb3, isWeb3Enabled, account, isWeb3EnableLoading, Moralis } = useMoralis()
 
     const [showResult, setShowResult] = useState(false)
 
@@ -38,8 +38,6 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
 
     const handleSuccess = async (tx) => {
         const contract = new ethers.Contract(contractAddress, abi, provider);
-        // console.log('Contract: ', contract);
-        setTransactionHash(tx);
 
         contract.on("minted", (rtEvent, newItemId) => {
             // Perform actions when the event is emitted
@@ -47,6 +45,8 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
             console.log('New Item ID:', newItemId);
             setData(rtEvent)
         });
+
+        setTransactionHash(tx);
         // loading modal
         // handleNewNoti(tx)
         onOpen()
@@ -57,6 +57,8 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
         // show result
         handleCompleted(tx)
     }
+
+    // console.log("Data country: ",data)
 
     const handleCompleted = async (tx) => {
         setMintedTimes(parseInt(mintedTimes) + 1)

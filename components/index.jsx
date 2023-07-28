@@ -82,7 +82,7 @@ export default function Index() {
         if (isWeb3Enabled && account) {
             updateUIValues()
         }
-    }, [isWeb3Enabled, account, updateUIValues])
+    }, [isWeb3Enabled, account])
 
 
     return (

@@ -23,7 +23,7 @@ export default function MintResultModal({ isOpen, onClose, setData, setShowResul
 
     const { user, enableWeb3, isWeb3Enabled, account, isWeb3EnableLoading } = useMoralis()
 
-    // const data2 = "usa";
+    console.log("Data country: ",data)
 
     return (
         <Modal motionPreset='slideInBottom' isOpen={isOpen} onClose={() => { onClose(); setData(""); setShowResult(false) }} className='transparent-div'>
@@ -36,16 +36,17 @@ export default function MintResultModal({ isOpen, onClose, setData, setShowResul
                 <Box className="rounded-xl mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]" mt={6} w={"full"}>
                     <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='#0E1114'>
                         <ModalBody pt={4} rounded={"xl"} backgroundColor={"#0E1114"} pb={4} position={"relative"} color={"white"}>
-                            <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`${country[data]?.image || country.serbia.image}`} width={330} height={400}></img>
+                            <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`${country[data]?.image || country.brazil.image}`} width={330} height={400}></img>
+                            {/* <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${data}.png`|| country.serbia.image } width={330} height={400}></img> */}
                             <Grid templateColumns='repeat(2, 1fr)'>
                                 <GridItem colSpan={1}>
                                     <Text fontSize={14} mt={1} color={"rgba(41,49,61,1)"}>Team</Text>
-                                    <Text fontSize={14} mt={1}>{country[data]?.name || ""}</Text>
+                                    <Text fontSize={14} mt={1}>{country[data]?.name || country.brazil.name}</Text>
                                     <Text fontSize={14} mt={4} pt={4} borderTop={"1px solid rgba(41,49,61,1)"} color={"rgba(41,49,61,1)"}>Estimate</Text>
                                 </GridItem>
                                 <GridItem colSpan={1}>
                                     <Text fontSize={14} mt={1} color={"rgba(41,49,61,1)"}>Rarity</Text>
-                                    <Text fontSize={14} mt={1} >{country[data]?.attributes[2].value || ""}%</Text>
+                                    <Text fontSize={14} mt={1} >{country[data]?.attributes[2].value || country.brazil.attributes[2].value}%</Text>
                                     <Text fontSize={14} mt={4} pt={4} borderTop={"1px solid rgba(41,49,61,1)"}>≈$68,000</Text>
                                 </GridItem>
                             </Grid>
