@@ -21,8 +21,6 @@ import MintResultModal from './Modal/mintResultModal'
 export default function Layer02({ mintedTimes, setApprovalForAll,
     isApprovedForAll, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {
 
-    // const { Moralis, Web3Api } = useMoralisWeb3Api();
-
     const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
 
     const { web3 } = useMoralisWeb3Api();

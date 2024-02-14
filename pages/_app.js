@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),
-    uri: "https://api.studio.thegraph.com/query/48196/wcfi-marketplace/v0.0.2"
+    uri: "https://api.studio.thegraph.com/query/65735/blast/v0.0.1"
 })
 
 import "../styles/globals.css";
