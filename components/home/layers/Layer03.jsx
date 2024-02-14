@@ -15,12 +15,10 @@ export default function Layer03() {
                             <Text fontWeight={700} fontSize={20} style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Tier 1</Text>
                             <Text fontWeight={200} >Rarity</Text>
                         </Box>
-                        <FlagAndRate name="Brazil" flag="brazil" minted="84" rarity="0.08" price="96.000" />
                         <FlagAndRate name="France" flag="france" minted="104" rarity="0.10" price="77.538" />
                         <FlagAndRate name="England" flag="england" minted="112" rarity="0.11" price="72.000" />
                         <FlagAndRate name="Spain" flag="spain" minted="104" rarity="0.14" price="57.600" />
-                        <FlagAndRate name="Germany" flag="germany" minted="118" rarity="0.19" price="42,894" />
-                        <FlagAndRate name="Argentina" flag="argentina" minted="118" rarity="0.19" price="42,894" />
+                        <FlagAndRate name="Turkey" flag="turkey" minted="118" rarity="0.19" price="42,894" />
                         <FlagAndRate name="Belgium" flag="belgium" minted="226" rarity="0.22" price="35,681" />
                         <FlagAndRate name="Portugal" flag="portugal" minted="226" rarity="0.22" price="35,681" />
                     </Box>
@@ -32,13 +30,11 @@ export default function Layer03() {
                             <Text fontWeight={200} >Rarity</Text>
                         </Box>
                         <FlagAndRate name="Netherlands" flag="netherlands" minted="264" rarity="0.26" price="30,545" />
-                        <FlagAndRate name="Denmark" flag="denmark" minted="526" rarity="0.52" price="15,331" />
+                        <FlagAndRate name="Austria" flag="Austria" minted="526" rarity="0.52" price="15,331" />
                         <FlagAndRate name="Croatia" flag="croatia" minted="658" rarity="0.65" price="12,255" />
-                        <FlagAndRate name="Uruguay" flag="uruguay" minted="940" rarity="0.93" price="8,579" />
-                        <FlagAndRate name="Poland" flag="poland" minted="1,221" rarity="1.21" price="6,604" />
-                        <FlagAndRate name="Senegal" flag="senegal" minted="1,221" rarity="1.21" price="6,604" />
-                        <FlagAndRate name="United States" flag="usa" minted="1,503" rarity="1.49" price="5,365" />
-                        <FlagAndRate name="Serbia" flag="serbia" minted="1,503" rarity="1.49" price="5,365" />
+                        <FlagAndRate name="Italy" flag="italy" minted="940" rarity="0.93" price="8,579" />
+                        <FlagAndRate name="Romania" flag="romania" minted="1,221" rarity="1.21" price="6,604" />
+                        <FlagAndRate name="Hungary" flag="hungary" minted="1,221" rarity="1.21" price="6,604" />
                     </Box>
                 </GridItem>
 

@@ -7,106 +7,73 @@ export default function ChildrenFilter({ isChecked, handleCheckboxChange, handle
     return (
         <>
             <Stack hidden={showTier != 1} spacing={[1, 5]} >
-                <CheckBox number={0} country={"brazil"} isChecked={isChecked}
+                <CheckBox number={0} country={"france"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={1} country={"france"} isChecked={isChecked}
+                <CheckBox number={1} country={"england"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={2} country={"england"} isChecked={isChecked}
+                <CheckBox number={2} country={"spain"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={3} country={"spain"} isChecked={isChecked}
+                <CheckBox number={3} country={"turkey"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={4} country={"germany"} isChecked={isChecked}
+                <CheckBox number={4} country={"belgium"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={5} country={"argentina"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={6} country={"belgium"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={7} country={"portugal"} isChecked={isChecked}
+                <CheckBox number={5} country={"portugal"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
             </Stack>
             <Stack hidden={showTier != 2} spacing={[1, 5]} >
-                <CheckBox number={8} country={"netherlands"} isChecked={isChecked}
+                <CheckBox number={6} country={"netherlands"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={9} country={"denmark"} isChecked={isChecked}
+                <CheckBox number={7} country={"austria"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={10} country={"croatia"} isChecked={isChecked}
+                <CheckBox number={8} country={"croatia"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={11} country={"uruguay"} isChecked={isChecked}
+                <CheckBox number={9} country={"italy"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={12} country={"poland"} isChecked={isChecked}
+                <CheckBox number={10} country={"romania"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={13} country={"senegal"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={14} country={"usa"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={15} country={"serbia"} isChecked={isChecked}
+                <CheckBox number={11} country={"hungary"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
             </Stack>
             <Stack hidden={showTier != 3} spacing={[1, 5]} >
-                <CheckBox number={16} country={"switzerland"} isChecked={isChecked}
+                <CheckBox number={12} country={"switzerland"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={17} country={"mexico"} isChecked={isChecked}
+                <CheckBox number={13} country={"denmark"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={18} country={"wales"} isChecked={isChecked}
+                <CheckBox number={14} country={"slovakia"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={19} country={"ghana"} isChecked={isChecked}
+                <CheckBox number={15} country={"czech"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={20} country={"ecuador"} isChecked={isChecked}
+                <CheckBox number={16} country={"germany"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={21} country={"morocco"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={22} country={"cameroon"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={23} country={"canada"} isChecked={isChecked}
+                <CheckBox number={17} country={"scotland"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
             </Stack>
             <Stack hidden={showTier != 4} spacing={[1, 5]} >
-                <CheckBox number={24} country={"japan"} isChecked={isChecked}
+                <CheckBox number={18} country={"albania"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={25} country={"qatar"} isChecked={isChecked}
+                <CheckBox number={19} country={"serbia"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={26} country={"tunisia"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={27} country={"korea"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={28} country={"australia"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={29} country={"iran"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={30} country={"saudiArabia"} isChecked={isChecked}
-                    handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
-                    handleUncheckedFunction={handleUncheckedFunction} />
-                <CheckBox number={31} country={"costaRica"} isChecked={isChecked}
+                <CheckBox number={20} country={"slovenia"} isChecked={isChecked}
                     handleCheckboxChange={handleCheckboxChange} handleCheckedFunction={handleCheckedFunction}
                     handleUncheckedFunction={handleUncheckedFunction} />
             </Stack>

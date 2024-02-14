@@ -32,7 +32,7 @@ export default function Information() {
                         <Text backgroundColor={"black"} color={'white'} fontWeight={"bold"} fontSize={20}>1,028</Text>
                     </GridItem>
                     <GridItem colSpan={{ base: 3, sm: 3, md: 1, lg: 1, xl: 1, "2xl": 1 }} bg='#0E1114' borderRadius={10}>
-                        <Text pt={3} backgroundColor={"black"} color={'#7D8DA7'} fontWeight={"hairline"} fontSize={12}>Total Volume (BNB)</Text>
+                        <Text pt={3} backgroundColor={"black"} color={'#7D8DA7'} fontWeight={"hairline"} fontSize={12}>Total Volume (ETH)</Text>
                         <Text backgroundColor={"black"} color={'white'} fontWeight={"bold"} fontSize={20}>6,234,000.00</Text>
                     </GridItem>
                     <GridItem colSpan={{ base: 3, sm: 3, md: 1, lg: 1, xl: 1, "2xl": 1 }} bg='#0E1114' borderRadius={10}>

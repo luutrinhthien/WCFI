@@ -16,13 +16,11 @@ export default function Layer04() {
                             <Text fontWeight={200} >Rarity</Text>
                         </Box>
                         <FlagAndRate name="Switzerland" flag="switzerland" minted="1,503" rarity="1.49" price="5,365" />
-                        <FlagAndRate name="Mexico" flag="mexico" minted="1,879" rarity="1.86" price="4,292" />
-                        <FlagAndRate name="Wales" flag="wales" minted="1,879" rarity="1.86" price="4,292" />
-                        <FlagAndRate name="Ghana" flag="ghana" minted="2,818" rarity="2.80" price="2,862" />
-                        <FlagAndRate name="Ecuador" flag="ecuador" minted="2,818" rarity="2.80" price="2,146" />
-                        <FlagAndRate name="Moroco" flag="morocco" minted="3,758" rarity="3.73" price="2,146" />
-                        <FlagAndRate name="Cameroon" flag="cameroon" minted="4,698" rarity="4.66" price="1,716" />
-                        <FlagAndRate name="Canada" flag="canada" minted="4,698" rarity="4.66" price="1,716" />
+                        <FlagAndRate name="Denmark" flag="denmark" minted="1,879" rarity="1.86" price="4,292" />
+                        <FlagAndRate name="Slovakia" flag="slovakia" minted="1,879" rarity="1.86" price="4,292" />
+                        <FlagAndRate name="Czech Republic" flag="czech" minted="2,818" rarity="2.80" price="2,862" />
+                        <FlagAndRate name="Germany" flag="germany" minted="2,818" rarity="2.80" price="2,146" />
+                        <FlagAndRate name="Scotland" flag="scotland" minted="3,758" rarity="3.73" price="2,146" />
                     </Box>
                 </GridItem>
                 <GridItem colSpan={{ base: 8, sm: 8, md: 4, lg: 4, xl: 4, "2xl": 4 }} bg='#0E1114' borderRadius={10}>
@@ -31,14 +29,9 @@ export default function Layer04() {
                             <Text fontWeight={600} fontSize={20} color={'#B6BFCD'}>Tier 4</Text>
                             <Text fontWeight={200} >Rarity</Text>
                         </Box>
-                        <FlagAndRate name="Japan" flag="japan" minted="4,698" rarity="4.66" price="1,716" />
-                        <FlagAndRate name="Qatar" flag="qatar" minted="4,698" rarity="4.66" price="1,716" />
-                        <FlagAndRate name="Tunisia" flag="tunisia" minted="5,637" rarity="5.59" price="1,431" />
-                        <FlagAndRate name="South Korea" flag="korea" minted="7,516" rarity="7.46" price="1,073" />
-                        <FlagAndRate name="Australia" flag="australia" minted="7,516" rarity="7.46" price="1,073" />
-                        <FlagAndRate name="Iran" flag="iran" minted="9,395" rarity="9.32" price="858" />
-                        <FlagAndRate name="Saudi Arabia" flag="saudiArabia" minted="9,395" rarity="9.32" price="858" />
-                        <FlagAndRate name="Costa Rica" flag="costaRica" minted="18,790" rarity="18.64" price="429" />
+                        <FlagAndRate name="Albania" flag="albania" minted="4,698" rarity="4.66" price="1,716" />
+                        <FlagAndRate name="Serbia" flag="serbia" minted="4,698" rarity="4.66" price="1,716" />
+                        <FlagAndRate name="Slovenia" flag="slovenia" minted="5,637" rarity="5.59" price="1,431" />
                     </Box>
                 </GridItem>
 

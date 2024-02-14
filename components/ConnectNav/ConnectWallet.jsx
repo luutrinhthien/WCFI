@@ -90,18 +90,18 @@ export default function ConnectWallet({ updateBalance }) {
         <Box display={'flex'}>
             <Show above='md'>
                 <Box mt={2} style={{ width: '34px', height: '34px' }}>
-                    <Image alt={'Bnb'} src={'/bnb.png'} width={48} height={48}></Image>
+                    <Image alt={'Eth'} src={'/bnb.png'} width={48} height={48}></Image>
                 </Box>
             </Show>
             <Show above='md'>
                 <Box mt={2} pl={3} pr={4}>
-                    <Text fontWeight={100} fontSize={10}>BNB</Text>
+                    <Text fontWeight={100} fontSize={10}>ETH</Text>
                     <Text fontWeight={700} fontSize={14}>{balance || "0.00"}</Text>
                 </Box>
             </Show>
             <Show below='md'>
                 <Box mt={2} pl={1} pr={1}>
-                    <Text fontWeight={"thin"} fontSize={10}>BNB</Text>
+                    <Text fontWeight={"thin"} fontSize={10}>ETH</Text>
                     <Text fontWeight={700} fontSize={14}>{balance || "0.00"}</Text>
                 </Box>
             </Show>
