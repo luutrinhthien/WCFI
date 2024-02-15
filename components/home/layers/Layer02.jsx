@@ -17,9 +17,12 @@ import {
 } from '@chakra-ui/react'
 import LoadingModal from "./Modal/loadingModal"
 import MintResultModal from './Modal/mintResultModal'
+import { useRouter } from 'next/router';
 
 export default function Layer02({ mintedTimes, setApprovalForAll,
-    isApprovedForAll, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {
+    mintWithRef, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {
+    const router = useRouter();
+    const refParam = router.query.ref;
 
     // const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
     const provider = new ethers.providers.JsonRpcProvider("https://sepolia.blast.io	");
@@ -73,16 +76,6 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
         onOpen()
     }
 
-    // const handleNewNoti = async (tx) => {
-    //     dispatch({
-    //         type: "success",
-    //         message: "Transaction Tompleted!",
-    //         title: "Tx Noti",
-    //         position: "topR",
-    //         icon: "",
-    //     })
-    // }
-
     const [walletOn, setWalletOn] = useState(false)
 
     const dispatch = useNotification()
@@ -95,10 +88,21 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
     const handleMint = async () => {
         // await mint()
         try {
-            await mint({
-                onSuccess: handleSuccess,
-                onError: (error) => console.log(error),
-            })
+            if (refParam) {
+                if(refParam == account){
+                    alert("Can't not referral yourself")
+                }else{
+                    await mintWithRef({
+                        onSuccess: handleSuccess,
+                        onError: (error) => console.log("e: ",error),
+                    })
+                }
+            } else {
+                await mint({
+                    onSuccess: handleSuccess,
+                    onError: (error) => console.log(error),
+                })
+            }
 
         } catch (error) {
             console.error('Error minting:', error);
@@ -148,18 +152,18 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                         </Box>
                             :
                             (
-                            //     !isApprovedForAll ? <Button
-                            //     mt={10}
-                            //     minW={"-webkit-fill-available"}
-                            //     rounded={12}
-                            //     dropShadow={'inner'}
-                            //     border={'black solid 2px'}
-                            //     boxShadow={"3px 3px white"}
-                            //     disabled={isWeb3EnableLoading}
-                            //     onClick={handleApprove}
-                            //     style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
-                            //     <Text fontWeight={700} >Approve</Text>
-                            // </Button> :
+                                //     !isApprovedForAll ? <Button
+                                //     mt={10}
+                                //     minW={"-webkit-fill-available"}
+                                //     rounded={12}
+                                //     dropShadow={'inner'}
+                                //     border={'black solid 2px'}
+                                //     boxShadow={"3px 3px white"}
+                                //     disabled={isWeb3EnableLoading}
+                                //     onClick={handleApprove}
+                                //     style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
+                                //     <Text fontWeight={700} >Approve</Text>
+                                // </Button> :
                                 <Button
                                     mt={10}
                                     minW={"-webkit-fill-available"}

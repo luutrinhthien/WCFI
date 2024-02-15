@@ -10,8 +10,11 @@ import Layer03 from './home/layers/Layer03'
 import Layer04 from './home/layers/Layer04'
 import Layer05 from './home/layers/Layer05'
 import Layer06 from './home/layers/Layer06'
+import { useRouter } from 'next/router';
 
 export default function Index() {
+    const router = useRouter();
+    const refParam = router.query.ref;
 
     const { isWeb3Enabled, account } = useMoralis()
 
@@ -42,6 +45,16 @@ export default function Index() {
         functionName: "mint",
         // msgValue: entranceFee,
         params: {},
+        msgValue: "100000000000000"
+    })
+
+    const {
+        runContractFunction: mintWithRef
+    } = useWeb3Contract({
+        abi: abi,
+        contractAddress: contractAddress,
+        functionName: "mintWithRef",
+        params: {ref: refParam},
         msgValue: "100000000000000"
     })
 
@@ -105,7 +118,7 @@ export default function Index() {
                     <GridItem colSpan={{ base: 12, sm: 12, md: 12, lg: 9, xl: 9, "2xl": 9 }} rowSpan={1}>
                         <Layer02 mintedTimes={mintedTimes} setApprovalForAll={setApprovalForAll}
                             isApprovedForAll={isApprove} mintFee={mintFeeUI} mint={mint} setMintedTimes={setMintedTimes}
-                            setUpdateBalance={setUpdateBalance} setIsApprove={setIsApprove}
+                            setUpdateBalance={setUpdateBalance} setIsApprove={setIsApprove} mintWithRef={mintWithRef}
                         />
                     </GridItem>
                     <GridItem colSpan={{ base: 12, sm: 12, md: 12, lg: 9, xl: 9, "2xl": 9 }} rowSpan={1}>

@@ -1,20 +1,74 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CommissionTable from './components/ComissionTable'
 import HistoryCommissionTable from './components/HistoryCommissionTable'
 import MyReferralSidebar from './components/MyReferralSidebar'
-
-import { useMoralis } from 'react-moralis'
+import { abi, contractAddress, marketplaceAddress } from '../../constants'
+import { useMoralis, useWeb3Contract } from 'react-moralis'
 import { Box, Flex, Text } from '@chakra-ui/react';
 import NavBar from '../NavBar'
 
 const Referral = () => {
     const { account } = useMoralis()
+    const [refList, setRefList] = useState()
+    const [totalReward, setTotalReward] = useState()
+    const [totalClaim, setTotalClaim] = useState()
+    const [reload, setReload] = useState(false)
+
+    const {
+        runContractFunction: claimReward
+    } = useWeb3Contract({
+        abi: abi,
+        contractAddress: contractAddress,
+        functionName: "claimReward",
+        msgValue: 0,
+        params: {ref: account},
+    })
+
+    const { runContractFunction: getRefList } = useWeb3Contract({
+        abi: abi,
+        contractAddress: contractAddress, // specify the networkId
+        functionName: "getRefList",
+        params: { ref: account },
+    })
+
+    const { runContractFunction: getTotalReward } = useWeb3Contract({
+        abi: abi,
+        contractAddress: contractAddress, // specify the networkId
+        functionName: "getTotalReward",
+        params: { ref: account },
+    })
+
+    const { runContractFunction: getTotalClaim } = useWeb3Contract({
+        abi: abi,
+        contractAddress: contractAddress, // specify the networkId
+        functionName: "getTotalClaim",
+        params: { ref: account },
+    })
+
+
+    useEffect(()=>{
+        if(account){
+            const getRef = async ()=>{
+                try {
+                    const res = await getRefList();
+                    setRefList(res)
+                    const res1 = await getTotalReward();
+                    setTotalReward(res1)
+                    const res2 = await getTotalClaim();
+                    setTotalClaim(res2)
+                } catch (error) {
+                    console.log("Get data error: ", error)
+                }
+            }
+            getRef()
+        }
+    },[account,reload])
 
   return (
     <Box backgroundColor={"black"}>
             <Box backgroundColor={"black"} color={'white'}>
-                <NavBar target="marketplace"></NavBar>
+                <NavBar target="referral"></NavBar>
             </Box>
 
             <Box display={{ base: "block", sm: "block", md: "flex", lg: "flex", xl: "flex", "2xl": "flex" }} style={{ margin: "20px auto", maxWidth: "80%" }} justifyContent={"space-between"}>
@@ -28,9 +82,10 @@ const Referral = () => {
                     </Text>
 
                     <CommissionTable />
-                    <HistoryCommissionTable />
+                    <HistoryCommissionTable refList={refList} />
                     </Box>
-                    <MyReferralSidebar address={account} />
+                    <MyReferralSidebar address={account} totalReward={totalReward} totalClaim={totalClaim} 
+                    refList={refList} claimReward={claimReward} setReload={setReload}/>
                 </Flex>
             </Box>
   </Box>

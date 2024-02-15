@@ -8,7 +8,8 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
     // uri: "https://api.studio.thegraph.com/query/65735/blast/v0.0.1"
     // uri: "https://api.studio.thegraph.com/query/65735/wcfi/v0.0.1"
-    uri: "https://api.studio.thegraph.com/query/65735/finalblast/v0.0.1"
+    // uri: "https://api.studio.thegraph.com/query/65735/finalblast/v0.0.1"
+    uri: "https://api.studio.thegraph.com/query/65735/blastwifref/v0.0.1"
 })
 
 import "../styles/globals.css";
@@ -20,7 +21,8 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <title>WCFI</title>
                 <meta name="description" content="WFCI" />
-                <link href="https://api.fontshare.com/v2/css?f%5B%5D=panchang@700&display=swap" rel="stylesheet"></link>
+                {/* <link href="https://api.fontshare.com/v2/css?f%5B%5D=panchang@700&display=swap" rel="stylesheet"></link> */}
+                <link href="https://api.fontshare.com/v2/css?f[]=panchang@400&f[]=panchang@700&display=swap" rel="stylesheet"></link>
             </Head>
             <MoralisProvider initializeOnMount={false}>
                 <ApolloProvider client={client}>

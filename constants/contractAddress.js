@@ -6,5 +6,8 @@
 // export const marketplaceAddress = "0x0D3CcD95342D76540E96ddEcf36B1DeD1790D7FA"
 
 // export const contractAddress = "0xD6a3F895102DB499d694187143dACDCAc1416d7B"
-export const contractAddress = "0x250b5A5E88F304510D6d9cd72B51763c8d83e59D"
-export const marketplaceAddress = "0x53A438ca02b49b66AF91aa24dfd02a333aBC6d98"
+// export const contractAddress = "0x250b5A5E88F304510D6d9cd72B51763c8d83e59D"
+// export const marketplaceAddress = "0x53A438ca02b49b66AF91aa24dfd02a333aBC6d98"
+
+export const contractAddress = "0xcb1f78f917B834054a7d856C643F7DC3631fA28e"
+export const marketplaceAddress = "0xf929076F0C00dFF8f19e300F977Eb5fC8a71679e"
