@@ -1,11 +1,11 @@
 {
-    "name": "Denmark",
+    "name": "Czech Republic",
     "description": "Mint randomly releases NFT shoes to represent the national team",
-    "image": "https://ipfs.io/ipfs/bafybeiawf23akrcbje4q7ggdbwquxgciuq65sjin3ujn5cnvtsjtkzhmoi/Tier 3/denmark.png",
+    "image": "https://ipfs.io/ipfs/bafybeiawf23akrcbje4q7ggdbwquxgciuq65sjin3ujn5cnvtsjtkzhmoi/Tier 3/Czech.png",
     "attributes": [
         {
             "trait_type": "id",
-            "value": "10"
+            "value": "16"
         },
         {
             "trait_type": "tier",
@@ -13,7 +13,7 @@
         },
         {
             "trait_type": "rarity",
-            "value": "1.86"
+            "value": "2.80"
         }
     ]
 }

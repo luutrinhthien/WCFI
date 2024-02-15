@@ -1,19 +1,19 @@
 {
-    "name": "Denmark",
+    "name": "Hungary",
     "description": "Mint randomly releases NFT shoes to represent the national team",
-    "image": "https://ipfs.io/ipfs/bafybeiawf23akrcbje4q7ggdbwquxgciuq65sjin3ujn5cnvtsjtkzhmoi/Tier 3/denmark.png",
+    "image": "https://ipfs.io/ipfs/bafybeiawf23akrcbje4q7ggdbwquxgciuq65sjin3ujn5cnvtsjtkzhmoi/Tier 2/hungary 999.png",
     "attributes": [
         {
             "trait_type": "id",
-            "value": "10"
+            "value": "12"
         },
         {
             "trait_type": "tier",
-            "value": "3"
+            "value": "2"
         },
         {
             "trait_type": "rarity",
-            "value": "1.86"
+            "value": "1.21"
         }
     ]
 }
