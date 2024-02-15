@@ -30,6 +30,16 @@ const tunisia = require("./tunisia.json")
 const uruguay = require("./uruguay.json")
 const usa = require("./usa.json")
 const wales = require("./wales.json")
+const turkey = require("./turkey.json")
+const austria = require("./austria.json")
+const italy = require("./italy.json")
+const romania = require("./romania.json")
+const hungary = require("./hungary.json")
+const slovakia = require("./slovakia.json")
+const czech = require("./czech.json")
+const scotland = require("./scotland.json")
+const albania = require("./albania.json")
+const slovenia = require("./slovenia.json")
 
 module.exports = {
     argentina,
@@ -64,4 +74,14 @@ module.exports = {
     uruguay,
     usa,
     wales,
+    turkey,
+    austria,
+    italy,
+    romania,
+    hungary,
+    slovakia,
+    czech,
+    scotland,
+    albania,
+    slovenia
 }
