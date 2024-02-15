@@ -103,7 +103,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                                 <GridItem colSpan={1}>
                                     <Text mt={1} color={"rgba(41,49,61,1)"}>Rarity</Text>
                                     <Text mt={1} color={"white"}>{metadata[country].attributes[2].value}%</Text>
-                                    <Box mt={4} color={"white"} pt={4} borderTop={"1px solid rgba(41,49,61,1)"}>≈{Number(price) / 1000000000000000000} BNB</Box>
+                                    <Box mt={4} color={"white"} pt={4} borderTop={"1px solid rgba(41,49,61,1)"}>≈{Number(price) / 1000000000000000000} ETH</Box>
                                 </GridItem>
                             </Grid>
                         </Box>
@@ -150,7 +150,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                                     </Box>
                                     <Box mt={1} display={"flex"} justifyContent={"space-between"}>
                                         <Text fontSize={14} mt={2} color={"rgba(41,49,61,1)"}>Price</Text>
-                                        <Box fontSize={15} mt={2} fontWeight={"semibold"}>{Number(price) / 1000000000000000000} BNB</Box>
+                                        <Box fontSize={15} mt={2} fontWeight={"semibold"}>{Number(price) / 1000000000000000000} ETH</Box>
                                     </Box>
                                 </Box>
                                 {!isApprovedForAll && account ? <Button

@@ -223,7 +223,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                                         </Box>
                                         <Box mt={1} display={"flex"} justifyContent={"space-between"}>
                                             <Text mt={2} color={"rgba(41,49,61,1)"} fontSize={14}>Price</Text>
-                                            <Box fontSize={15} mt={2} fontWeight={"semibold"}>{price ? price / (1 * 10 ** 18) + " BNB" : "≈$68,000"}</Box>
+                                            <Box fontSize={15} mt={2} fontWeight={"semibold"}>{price ? price / (1 * 10 ** 18) + " ETH" : "≈$68,000"}</Box>
                                         </Box>
                                     </Box>
                                     {optionView != "listing" && <Button
@@ -273,7 +273,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                         </ModalHeader>
 
                         <ModalBody p={3} pl={6} pr={6} w={{ base: "auto", sm: "auto", md: "130%", lg: "130%", xl: "130%", "2xl": "130%" }} pt={4} rounded={"xl"} backgroundColor={"#0E1114"} pb={4} color={"white"}>
-                            <Text ml={10} mb={2} color={"#7D8DA7"}> Enter Price (BNB)</Text>
+                            <Text ml={10} mb={2} color={"#7D8DA7"}> Enter Price (ETH)</Text>
                             <InputGroup>
                                 <InputLeftElement>
                                     <img src="/bnb.png" width={24} alt="" />
@@ -302,7 +302,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                             </Box>
                             <Box color={"#7D8DA7"} mt={3} mb={3} display={'flex'} justifyContent={"space-between"}>
                                 <Box>You will receive</Box>
-                                <Box color={"white"} fontWeight={"bold"}>≈&nbsp; {input * 95 / 100} BNB</Box>
+                                <Box color={"white"} fontWeight={"bold"}>≈&nbsp; {input * 95 / 100} ETH</Box>
                             </Box>
                             {!isApprovedForAll ? <Button
                                 mt={5}

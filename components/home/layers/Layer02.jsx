@@ -161,7 +161,7 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                                     disabled={isWeb3EnableLoading}
                                     onClick={handleMint}
                                     style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
-                                    <Text fontSize={12} fontWeight={700} >Mint with {mintFee ? ethers.utils.formatEther(mintFee) : 0} BNB</Text>
+                                    <Text fontSize={12} fontWeight={700} >Mint with {mintFee ? ethers.utils.formatEther(mintFee) : 0} ETH</Text>
                                 </Button>)}
                     </Box>
                     {walletOn && <WalletModal isOpened={true} setIsOpened={function noRefCheck() { setWalletOn(!walletOn) }} />}
