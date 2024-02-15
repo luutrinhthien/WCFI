@@ -92,7 +92,6 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                         (metadata[country].attributes[1].value == 3 ? "rounded-lg mx-auto bg-blue-700 p-[2px]" : "rounded-lg mx-auto bg-gray-700 p-[2px]"))} onClick={onOpen}>
                     <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='black'>
                         <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${country}.png`} width={330} height={400}></img>
-
                         <Box fontSize={12} p={4} background={"#0E1114"}>
                             <Grid templateColumns='repeat(2, 1fr)'>
                                 <GridItem colSpan={1}>
