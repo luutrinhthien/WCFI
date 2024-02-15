@@ -98,9 +98,11 @@ export default function NavBar({ updateBalance, target }) {
                                     </Box>
                                 </li>
                                 <li className="text-white">
-                                    <Link href="/">
-                                        Referal Program
-                                    </Link>
+                                    <Box style={{ background: (target == "referral" ? "linear-gradient(to right, #80E8DD, #D855A6)" : "black"), WebkitBackgroundClip: (target == "referral" ? 'text' : ""), WebkitTextFillColor: (target == "referral" ? 'transparent' : "") }}>
+                                        <Link href="/referral" >
+                                            Referal Program
+                                        </Link>
+                                    </Box>
                                 </li>
                             </ul>
 
