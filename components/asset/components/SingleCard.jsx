@@ -162,7 +162,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                         (metadata[country].attributes[1].value == 3 ? "rounded-lg mx-auto bg-blue-700 p-[2px]" : "rounded-lg mx-auto bg-gray-700 p-[2px]"))} onClick={onOpen}>
                     <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='black'>
                         {/* <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${country}.png`} width={330} height={400}></img> */}
-                        <div className='flex h-[300px]'>
+                        <div className='flex h-[400px]'>
                             <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${country}.png`} width={330} height={400}></img>
                         </div>
                         <Box p={4} fontSize={14} background={"#0E1114"}>
