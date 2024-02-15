@@ -36,8 +36,8 @@ export default function MintResultModal({ isOpen, onClose, setData, setShowResul
                 <Box className="rounded-xl mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]" mt={6} w={"full"}>
                     <Box className="flex flex-col justify-between h-full rounded-lg p-1" bg='#0E1114'>
                         <ModalBody pt={4} rounded={"xl"} backgroundColor={"#0E1114"} pb={4} position={"relative"} color={"white"}>
-                            <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`${country[data]?.image || country.brazil.image}`} width={330} height={400}></img>
-                            {/* <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${data}.png`|| country.serbia.image } width={330} height={400}></img> */}
+                            {/* <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`${country[data]?.image || country.brazil.image}`} width={330} height={400}></img> */}
+                            <img style={{ display: "block", margin: "auto" }} alt={'shoes'} src={`/shoes/${data}.png`} width={330} height={400}></img>
                             <Grid templateColumns='repeat(2, 1fr)'>
                                 <GridItem colSpan={1}>
                                     <Text fontSize={14} mt={1} color={"rgba(41,49,61,1)"}>Team</Text>
@@ -70,7 +70,7 @@ export default function MintResultModal({ isOpen, onClose, setData, setShowResul
 
                 <Box className="rounded-xl mt-4 mx-auto bg-gradient-to-r p-[2px] from-[#80E8DD] via-[#7CC2F6] to-[#D855A6]" mt={5} w={"full"}>
                     <Box className="flex flex-col justify-between h-full rounded-xl p-1" bg='#0E1114'>
-                        <Button onClick={() => { window.open(`https://testnet.bscscan.com/tx/${transactionHash}`, '_blank') }} variant='unstyle' color={"white"} p={5} fontWeight={700} fontSize={14} >View on BSCscan</Button>
+                        <Button onClick={() => { window.open(`https://testnet.blastscan.io/tx/${transactionHash}`, '_blank') }} variant='unstyle' color={"white"} p={5} fontWeight={700} fontSize={14} >View on Blastscan</Button>
                     </Box>
                 </Box>
             </ModalContent>

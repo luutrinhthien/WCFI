@@ -21,7 +21,8 @@ import MintResultModal from './Modal/mintResultModal'
 export default function Layer02({ mintedTimes, setApprovalForAll,
     isApprovedForAll, mintFee, mint, setMintedTimes, setUpdateBalance, setIsApprove }) {
 
-    const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
+    // const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");
+    const provider = new ethers.providers.JsonRpcProvider("https://sepolia.blast.io	");
 
     const { web3 } = useMoralisWeb3Api();
 
@@ -37,12 +38,19 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
     const handleSuccess = async (tx) => {
         const contract = new ethers.Contract(contractAddress, abi, provider);
 
-        contract.on("minted", (rtEvent, newItemId) => {
+        contract.on("minted", (country, tokenId) => {
             // Perform actions when the event is emitted
-            console.log('Event emitted:', rtEvent);
-            console.log('New Item ID:', newItemId);
-            setData(rtEvent)
+            console.log('Event emitted:', country);
+            console.log('New Item ID:', tokenId);
+            setData(country)
         });
+
+        // contract.on("minted", (rtEvent, newItemId) => {
+        //     // Perform actions when the event is emitted
+        //     console.log('Event emitted:', rtEvent);
+        //     console.log('New Item ID:', newItemId);
+        //     setData(rtEvent)
+        // });
 
         setTransactionHash(tx);
         // loading modal
@@ -139,18 +147,19 @@ export default function Layer02({ mintedTimes, setApprovalForAll,
                             </Box>
                         </Box>
                             :
-                            (!isApprovedForAll ? <Button
-                                mt={10}
-                                minW={"-webkit-fill-available"}
-                                rounded={12}
-                                dropShadow={'inner'}
-                                border={'black solid 2px'}
-                                boxShadow={"3px 3px white"}
-                                disabled={isWeb3EnableLoading}
-                                onClick={handleApprove}
-                                style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
-                                <Text fontWeight={700} >Approve</Text>
-                            </Button> :
+                            (
+                            //     !isApprovedForAll ? <Button
+                            //     mt={10}
+                            //     minW={"-webkit-fill-available"}
+                            //     rounded={12}
+                            //     dropShadow={'inner'}
+                            //     border={'black solid 2px'}
+                            //     boxShadow={"3px 3px white"}
+                            //     disabled={isWeb3EnableLoading}
+                            //     onClick={handleApprove}
+                            //     style={{ background: 'linear-gradient(to right, #80E8DD, #D855A6)' }}>
+                            //     <Text fontWeight={700} >Approve</Text>
+                            // </Button> :
                                 <Button
                                     mt={10}
                                     minW={"-webkit-fill-available"}
