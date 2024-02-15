@@ -127,7 +127,7 @@ export default function ConnectWallet({ updateBalance }) {
             {/* <ConnectButton>Connect Wallet</ConnectButton> */}
 
             {walletOn && <WalletModal isOpened={true} setIsOpened={function noRefCheck() { setWalletOn(!walletOn) }} />}
-            <Button hidden onClick={handleCheck} color={'black'}>Click Me</Button>
+            {/* <Button hidden onClick={handleCheck} color={'black'}>Click Me</Button> */}
         </Box >
     )
 }
