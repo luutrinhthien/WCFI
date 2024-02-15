@@ -273,7 +273,7 @@ export default function SingleCard({ setApprovalForAll, isApprovedForAll,
                             <Button color={"white"} variant={"unstyled"} fontSize={20} onClick={() => { onClose(); setIsSellView(false); setIsUpdateView(false); setInput("") }}>&times;</Button>
                         </ModalHeader>
 
-                        <ModalBody p={3} pl={6} pr={6} w={{ base: "auto", sm: "auto", md: "130%", lg: "130%", xl: "130%", "2xl": "130%" }} pt={4} rounded={"xl"} backgroundColor={"#0E1114"} pb={4} color={"white"}>
+                        <ModalBody p={3} pl={6} pr={6} w={{ base: "auto", sm: "auto", md: "130%", lg: "130%", xl: "130%", "2xl": "130%" }} pt={4} backgroundColor={"#0E1114"} pb={4} color={"white"}>
                             <Text ml={10} mb={2} color={"#7D8DA7"}> Enter Price (ETH)</Text>
                             <InputGroup>
                                 <InputLeftElement>
