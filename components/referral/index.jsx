@@ -5,7 +5,7 @@ import HistoryCommissionTable from './components/HistoryCommissionTable'
 import MyReferralSidebar from './components/MyReferralSidebar'
 import { abi, contractAddress, marketplaceAddress } from '../../constants'
 import { useMoralis, useWeb3Contract } from 'react-moralis'
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, useToast } from '@chakra-ui/react';
 import NavBar from '../NavBar'
 
 const Referral = () => {
@@ -77,7 +77,7 @@ const Referral = () => {
                     <Text fontWeight="bold" fontSize="lg" lineHeight="normal" color="white">Referral Program</Text>
                     <Text fontWeight="normal" fontSize="sm" color="rgb(99 117 146)" lineHeight="normal">
                         Invite friends with referral link and get up to{' '}
-                        <Text as="span" color="green.500">50%</Text> commission every time your
+                        <Text as="span" color="green.500">25%</Text> commission every time your
                         friends mint NFT.
                     </Text>
 

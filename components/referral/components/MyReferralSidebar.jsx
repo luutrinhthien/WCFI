@@ -80,7 +80,7 @@ const MyReferralSidebar = ({ address, totalReward, totalClaim, refList, claimRew
           marginTop="3"
           cursor="pointer"
           _hover={{ opacity: 0.8 }}
-          onClick={notificationCopy}
+          // onClick={notificationCopy}
         >
           <CopyToClipboard text={referralLink} onCopy={notificationCopy}>
             <Button w="full" bg="transparent" display="flex" justifyContent="space-between">
