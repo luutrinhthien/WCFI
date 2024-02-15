@@ -62,14 +62,14 @@ export default function ConnectWallet({ updateBalance }) {
 
     // useEffect(() => {
     //     if (chainId != undefined) {
-    //         if (chainId == 97) {
+    //         if (chainId == 168587773) {
 
     //         } else {
     //             async function init() {
     //                 // const { web3 } = await useMoralis();
     //                 const provider = new ethers.providers.Web3Provider(window.ethereum, undefined);
 
-    //                 const chainId = '0x61';
+    //                 const chainId = '0xA0D2C3D';
     //                 await provider.send('wallet_switchEthereumChain', [{ chainId }]);
     //             }
     //             init()
