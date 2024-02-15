@@ -78,13 +78,13 @@ export default function ConnectWallet({ updateBalance }) {
     //     }
     // }, [chainId])
 
-    const handleCheck = () => {
-        console.log(`HELLO----------${account}`)
-        console.log(`isWeb3----------${isWeb3Enabled}`)
-        console.log(`isInit----------${isInitialized}`)
-        console.log(`balance----------${balance}`)
-        // console.log(`web3ukitButton----------${ConnectButton}`)
-    }
+    // const handleCheck = () => {
+    //     console.log(`HELLO----------${account}`)
+    //     console.log(`isWeb3----------${isWeb3Enabled}`)
+    //     console.log(`isInit----------${isInitialized}`)
+    //     console.log(`balance----------${balance}`)
+    //     // console.log(`web3ukitButton----------${ConnectButton}`)
+    // }
 
     return (
         <Box display={'flex'}>
