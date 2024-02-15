@@ -30,7 +30,7 @@ export default function Layer03() {
                             <Text fontWeight={200} >Rarity</Text>
                         </Box>
                         <FlagAndRate name="Netherlands" flag="netherlands" minted="264" rarity="0.26" price="30,545" />
-                        <FlagAndRate name="Austria" flag="Austria" minted="526" rarity="0.52" price="15,331" />
+                        <FlagAndRate name="Austria" flag="austria" minted="526" rarity="0.52" price="15,331" />
                         <FlagAndRate name="Croatia" flag="croatia" minted="658" rarity="0.65" price="12,255" />
                         <FlagAndRate name="Italy" flag="italy" minted="940" rarity="0.93" price="8,579" />
                         <FlagAndRate name="Romania" flag="romania" minted="1,221" rarity="1.21" price="6,604" />
